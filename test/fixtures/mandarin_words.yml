@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  entry_id: MyText
+  status: 
+  meaning: MyText
+  character_simplified: MyString
+  character_traditional: MyString
+  pinyin_numbered: MyString
+  pinyin_marked: MyString
+  pinyin: MyString
+  tone_number: 1
+  mnemonic: MyText
+  notes: MyText
+  reference: MyString
+  etymology: MyText
+  sound_file: MyText
+  image_file: MyText
+  tags: MyText
+  opposites: MyString
+  related: MyString
+  wordtype: MyString
+  measure_word: MyText
+  initial: MyString
+  final: MyString
+  duplicate_from: MyText
+  ip_address: MyText
+  vote_value: 1
+
+two:
+  user: two
+  entry_id: MyText
+  status: 
+  meaning: MyText
+  character_simplified: MyString
+  character_traditional: MyString
+  pinyin_numbered: MyString
+  pinyin_marked: MyString
+  pinyin: MyString
+  tone_number: 1
+  mnemonic: MyText
+  notes: MyText
+  reference: MyString
+  etymology: MyText
+  sound_file: MyText
+  image_file: MyText
+  tags: MyText
+  opposites: MyString
+  related: MyString
+  wordtype: MyString
+  measure_word: MyText
+  initial: MyString
+  final: MyString
+  duplicate_from: MyText
+  ip_address: MyText
+  vote_value: 1

@@ -1,0 +1,147 @@
+<%= form_with(model: mandarin_word, local: true) do |form| %>
+  <% if mandarin_word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mandarin_word.errors.count, "error") %> prohibited this mandarin_word from being saved:</h2>
+
+      <ul>
+      <% mandarin_word.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry_id %>
+    <%= form.text_area :entry_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :meaning %>
+    <%= form.text_area :meaning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_simplified %>
+    <%= form.text_field :character_simplified %>
+  </div>
+
+  <div class="field">
+    <%= form.label :character_traditional %>
+    <%= form.text_field :character_traditional %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pinyin_numbered %>
+    <%= form.text_field :pinyin_numbered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pinyin_marked %>
+    <%= form.text_field :pinyin_marked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pinyin %>
+    <%= form.text_field :pinyin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tone_number %>
+    <%= form.number_field :tone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnemonic %>
+    <%= form.text_area :mnemonic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reference %>
+    <%= form.text_field :reference %>
+  </div>
+
+  <div class="field">
+    <%= form.label :etymology %>
+    <%= form.text_area :etymology %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sound_file %>
+    <%= form.text_area :sound_file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_file %>
+    <%= form.text_area :image_file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_area :tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opposites %>
+    <%= form.text_field :opposites %>
+  </div>
+
+  <div class="field">
+    <%= form.label :related %>
+    <%= form.text_field :related %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wordtype %>
+    <%= form.text_field :wordtype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :measure_word %>
+    <%= form.text_area :measure_word %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initial %>
+    <%= form.text_field :initial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final %>
+    <%= form.text_field :final %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duplicate_from %>
+    <%= form.text_area :duplicate_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip_address %>
+    <%= form.text_area :ip_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vote_value %>
+    <%= form.number_field :vote_value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

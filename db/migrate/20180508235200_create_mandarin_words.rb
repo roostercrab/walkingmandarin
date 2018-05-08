@@ -3,8 +3,10 @@ class CreateMandarinWords < ActiveRecord::Migration[5.2]
     create_table :mandarin_words do |t|
       t.references :user, foreign_key: true
       t.text :entry_id
-      t.enum :status
+      t.enum :view_status
       t.text :meaning
+      t.text :radical
+      t.text :stroke_order
       t.string :character_simplified
       t.string :character_traditional
       t.string :pinyin_numbered
@@ -18,17 +20,19 @@ class CreateMandarinWords < ActiveRecord::Migration[5.2]
       t.text :sound_file
       t.text :image_file
       t.text :tags
-      t.string :opposites
-      t.string :related
-      t.string :wordtype
-      t.text :measure_word
+      t.string :opposites_standard
+      t.string :similar_standard
+      t.string :opposites_traditional
+      t.string :similar_traditional
+      t.string :part_of_speech
+      t.text :classifier
       t.string :initial
       t.string :final
       t.text :duplicate_from
       t.text :ip_address
       t.integer :vote_value
 
-      t.timestampstz
+      t.timestamps
     end
   end
 end

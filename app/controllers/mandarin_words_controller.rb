@@ -69,6 +69,6 @@ class MandarinWordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mandarin_word_params
-      params.require(:mandarin_word).permit(:user_id, :entry_id, :status, :meaning, :character_simplified, :character_traditional, :pinyin_numbered, :pinyin_marked, :pinyin, :tone_number, :mnemonic, :notes, :reference, :etymology, :sound_file, :image_file, :tags, :opposites, :related, :wordtype, :measure_word, :initial, :final, :duplicate_from, :ip_address, :vote_value)
+      params.require(:mandarin_word).permit(:user_id, :entry_id, :view_status, :meaning, :radical, :stroke_order, :character_simplified, :character_traditional, :pinyin_numbered, :pinyin_marked, :pinyin, :tone_number, :mnemonic, :notes, :learned_from, :etymology, :sound_file, :image_file, :tags, :opposites_standard, :similar_standard, :opposites_traditional, :similar_traditional, :part_of_speech, :classifier, :initial, :final, :duplicate_from, :ip_address, :vote_value)
     end
 end

@@ -3,8 +3,10 @@
 one:
   user: one
   entry_id: MyText
-  status: 
+  view_status: 
   meaning: MyText
+  radical: MyText
+  stroke_order: MyText
   character_simplified: MyString
   character_traditional: MyString
   pinyin_numbered: MyString
@@ -13,15 +15,17 @@ one:
   tone_number: 1
   mnemonic: MyText
   notes: MyText
-  reference: MyString
+  learned_from: MyString
   etymology: MyText
   sound_file: MyText
   image_file: MyText
   tags: MyText
-  opposites: MyString
-  related: MyString
-  wordtype: MyString
-  measure_word: MyText
+  opposites_standard: MyString
+  similar_standard: MyString
+  opposites_traditional: MyString
+  similar_traditional: MyString
+  part_of_speech: MyString
+  classifier: MyText
   initial: MyString
   final: MyString
   duplicate_from: MyText
@@ -31,8 +35,10 @@ one:
 two:
   user: two
   entry_id: MyText
-  status: 
+  view_status: 
   meaning: MyText
+  radical: MyText
+  stroke_order: MyText
   character_simplified: MyString
   character_traditional: MyString
   pinyin_numbered: MyString
@@ -41,15 +47,17 @@ two:
   tone_number: 1
   mnemonic: MyText
   notes: MyText
-  reference: MyString
+  learned_from: MyString
   etymology: MyText
   sound_file: MyText
   image_file: MyText
   tags: MyText
-  opposites: MyString
-  related: MyString
-  wordtype: MyString
-  measure_word: MyText
+  opposites_standard: MyString
+  similar_standard: MyString
+  opposites_traditional: MyString
+  similar_traditional: MyString
+  part_of_speech: MyString
+  classifier: MyText
   initial: MyString
   final: MyString
   duplicate_from: MyText

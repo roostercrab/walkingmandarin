@@ -11,13 +11,23 @@
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @mandarin_word.status %>
+  <strong>View status:</strong>
+  <%= @mandarin_word.view_status %>
 </p>
 
 <p>
   <strong>Meaning:</strong>
   <%= @mandarin_word.meaning %>
+</p>
+
+<p>
+  <strong>Radical:</strong>
+  <%= @mandarin_word.radical %>
+</p>
+
+<p>
+  <strong>Stroke order:</strong>
+  <%= @mandarin_word.stroke_order %>
 </p>
 
 <p>
@@ -61,8 +71,8 @@
 </p>
 
 <p>
-  <strong>Reference:</strong>
-  <%= @mandarin_word.reference %>
+  <strong>Learned from:</strong>
+  <%= @mandarin_word.learned_from %>
 </p>
 
 <p>
@@ -86,23 +96,33 @@
 </p>
 
 <p>
-  <strong>Opposites:</strong>
-  <%= @mandarin_word.opposites %>
+  <strong>Opposites standard:</strong>
+  <%= @mandarin_word.opposites_standard %>
 </p>
 
 <p>
-  <strong>Related:</strong>
-  <%= @mandarin_word.related %>
+  <strong>Similar standard:</strong>
+  <%= @mandarin_word.similar_standard %>
 </p>
 
 <p>
-  <strong>Wordtype:</strong>
-  <%= @mandarin_word.wordtype %>
+  <strong>Opposites traditional:</strong>
+  <%= @mandarin_word.opposites_traditional %>
 </p>
 
 <p>
-  <strong>Measure word:</strong>
-  <%= @mandarin_word.measure_word %>
+  <strong>Similar traditional:</strong>
+  <%= @mandarin_word.similar_traditional %>
+</p>
+
+<p>
+  <strong>Part of speech:</strong>
+  <%= @mandarin_word.part_of_speech %>
+</p>
+
+<p>
+  <strong>Classifier:</strong>
+  <%= @mandarin_word.classifier %>
 </p>
 
 <p>

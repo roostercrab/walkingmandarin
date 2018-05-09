@@ -3,7 +3,7 @@
 one:
   user: one
   entry_id: MyText
-  view_status: 
+  view_status: 1
   meaning: MyText
   radical: MyText
   stroke_order: MyText
@@ -35,7 +35,7 @@ one:
 two:
   user: two
   entry_id: MyText
-  view_status: 
+  view_status: 1
   meaning: MyText
   radical: MyText
   stroke_order: MyText

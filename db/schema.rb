@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_13_033103) do
+ActiveRecord::Schema.define(version: 2018_05_09_000647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mandarin_words", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "entry_id"
+    t.integer "view_status"
+    t.text "meaning"
+    t.text "radical"
+    t.text "stroke_order"
+    t.string "character_simplified"
+    t.string "character_traditional"
+    t.string "pinyin_numbered"
+    t.string "pinyin_marked"
+    t.string "pinyin"
+    t.integer "tone_number"
+    t.text "mnemonic"
+    t.text "notes"
+    t.string "learned_from"
+    t.text "etymology"
+    t.text "sound_file"
+    t.text "image_file"
+    t.text "tags"
+    t.string "opposites_standard"
+    t.string "similar_standard"
+    t.string "opposites_traditional"
+    t.string "similar_traditional"
+    t.string "part_of_speech"
+    t.text "classifier"
+    t.string "initial"
+    t.string "final"
+    t.text "duplicate_from"
+    t.text "ip_address"
+    t.integer "vote_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_mandarin_words_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,4 +73,5 @@ ActiveRecord::Schema.define(version: 2018_04_13_033103) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "mandarin_words", "users"
 end

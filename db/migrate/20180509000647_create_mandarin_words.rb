@@ -3,7 +3,7 @@ class CreateMandarinWords < ActiveRecord::Migration[5.2]
     create_table :mandarin_words do |t|
       t.references :user, foreign_key: true
       t.text :entry_id
-      t.enum :view_status
+      t.integer :view_status
       t.text :meaning
       t.text :radical
       t.text :stroke_order

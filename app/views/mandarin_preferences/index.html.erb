@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mandarin Preferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Tone color 1</th>
+      <th>Tone color 2</th>
+      <th>Tone color 3</th>
+      <th>Tone color 4</th>
+      <th>Tone color 5</th>
+      <th>Actor tone 1</th>
+      <th>Actor tone 2</th>
+      <th>Actor tone 3</th>
+      <th>Actor tone 4</th>
+      <th>Actor tone 5</th>
+      <th>Understudy tone 1</th>
+      <th>Understudy tone 2</th>
+      <th>Understudy tone 3</th>
+      <th>Understudy tone 4</th>
+      <th>Understudy tone 5</th>
+      <th>Pref</th>
+      <th>Character variant pref</th>
+      <th>Mnemonic active field</th>
+      <th>Notes active field</th>
+      <th>Learned from active field</th>
+      <th>Etymology active field</th>
+      <th>Image active field</th>
+      <th>Tags active field</th>
+      <th>Opposite active field</th>
+      <th>Similar active field</th>
+      <th>Part of speech active field</th>
+      <th>Classifier active field</th>
+      <th>Initial final active field</th>
+      <th>Vote active field</th>
+      <th>Css pref</th>
+      <th>Revision</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mandarin_preferences.each do |mandarin_preference| %>
+      <tr>
+        <td><%= mandarin_preference.user %></td>
+        <td><%= mandarin_preference.tone_color_1 %></td>
+        <td><%= mandarin_preference.tone_color_2 %></td>
+        <td><%= mandarin_preference.tone_color_3 %></td>
+        <td><%= mandarin_preference.tone_color_4 %></td>
+        <td><%= mandarin_preference.tone_color_5 %></td>
+        <td><%= mandarin_preference.actor_tone_1 %></td>
+        <td><%= mandarin_preference.actor_tone_2 %></td>
+        <td><%= mandarin_preference.actor_tone_3 %></td>
+        <td><%= mandarin_preference.actor_tone_4 %></td>
+        <td><%= mandarin_preference.actor_tone_5 %></td>
+        <td><%= mandarin_preference.understudy_tone_1 %></td>
+        <td><%= mandarin_preference.understudy_tone_2 %></td>
+        <td><%= mandarin_preference.understudy_tone_3 %></td>
+        <td><%= mandarin_preference.understudy_tone_4 %></td>
+        <td><%= mandarin_preference.understudy_tone_5 %></td>
+        <td><%= mandarin_preference._pref %></td>
+        <td><%= mandarin_preference.character_variant_pref %></td>
+        <td><%= mandarin_preference.mnemonic_active_field %></td>
+        <td><%= mandarin_preference.notes_active_field %></td>
+        <td><%= mandarin_preference.learned_from_active_field %></td>
+        <td><%= mandarin_preference.etymology_active_field %></td>
+        <td><%= mandarin_preference.image_active_field %></td>
+        <td><%= mandarin_preference.tags_active_field %></td>
+        <td><%= mandarin_preference.opposite_active_field %></td>
+        <td><%= mandarin_preference.similar_active_field %></td>
+        <td><%= mandarin_preference.part_of_speech_active_field %></td>
+        <td><%= mandarin_preference.classifier_active_field %></td>
+        <td><%= mandarin_preference.initial_final_active_field %></td>
+        <td><%= mandarin_preference.vote_active_field %></td>
+        <td><%= mandarin_preference.css_pref %></td>
+        <td><%= mandarin_preference.revision_id %></td>
+        <td><%= link_to 'Show', mandarin_preference %></td>
+        <td><%= link_to 'Edit', edit_mandarin_preference_path(mandarin_preference) %></td>
+        <td><%= link_to 'Destroy', mandarin_preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mandarin Preference', new_mandarin_preference_path %>

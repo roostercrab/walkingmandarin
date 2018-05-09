@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_000647) do
+ActiveRecord::Schema.define(version: 2018_05_09_204333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mandarin_preferences", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "tone_color_1"
+    t.text "tone_color_2"
+    t.text "tone_color_3"
+    t.text "tone_color_4"
+    t.text "tone_color_5"
+    t.text "actor_tone_1"
+    t.text "actor_tone_2"
+    t.text "actor_tone_3"
+    t.text "actor_tone_4"
+    t.text "actor_tone_5"
+    t.text "understudy_tone_1"
+    t.text "understudy_tone_2"
+    t.text "understudy_tone_3"
+    t.text "understudy_tone_4"
+    t.text "understudy_tone_5"
+    t.integer "_pref"
+    t.integer "character_variant_pref"
+    t.integer "mnemonic_active_field"
+    t.integer "notes_active_field"
+    t.integer "learned_from_active_field"
+    t.integer "etymology_active_field"
+    t.integer "image_active_field"
+    t.integer "tags_active_field"
+    t.integer "opposite_active_field"
+    t.integer "similar_active_field"
+    t.integer "part_of_speech_active_field"
+    t.integer "classifier_active_field"
+    t.integer "initial_final_active_field"
+    t.integer "vote_active_field"
+    t.text "css_pref"
+    t.integer "revision_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_mandarin_preferences_on_user_id"
+  end
 
   create_table "mandarin_words", force: :cascade do |t|
     t.bigint "user_id"
@@ -73,5 +111,6 @@ ActiveRecord::Schema.define(version: 2018_05_09_000647) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "mandarin_preferences", "users"
   add_foreign_key "mandarin_words", "users"
 end

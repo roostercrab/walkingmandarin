@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :mandarin_preferences
   resources :mandarin_words
   devise_for :users
   resources :users

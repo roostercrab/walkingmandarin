@@ -14,7 +14,7 @@ class MandarinWordsController < ApplicationController
 
   # GET /mandarin_words/new
   def new
-    @mandarin_word = MandarinWord.new
+    @mandarin_word = current_user.mandarin_words.new
   end
 
   # GET /mandarin_words/1/edit
@@ -24,7 +24,7 @@ class MandarinWordsController < ApplicationController
   # POST /mandarin_words
   # POST /mandarin_words.json
   def create
-    @mandarin_word = MandarinWord.new(mandarin_word_params)
+    @mandarin_word = current_user.mandarin_words.new(mandarin_word_params)
 
     respond_to do |format|
       if @mandarin_word.save
@@ -69,6 +69,6 @@ class MandarinWordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mandarin_word_params
-      params.require(:mandarin_word).permit(:user_id, :entry_id, :view_status, :meaning, :radical, :stroke_order, :character_simplified, :character_traditional, :pinyin_numbered, :pinyin_marked, :pinyin, :tone_number, :mnemonic, :notes, :learned_from, :etymology, :sound_file, :image_file, :tags, :opposites_standard, :similar_standard, :opposites_traditional, :similar_traditional, :part_of_speech, :classifier, :initial, :final, :duplicate_from, :ip_address, :vote_value)
+      params.require(:mandarin_word).permit(:entry_id, :view_status, :meaning, :radical, :stroke_order, :character_simplified, :character_traditional, :pinyin_numbered, :pinyin_marked, :pinyin, :tone_number, :mnemonic, :notes, :learned_from, :etymology, :sound_file, :image_file, :tags, :opposites_standard, :similar_standard, :opposites_traditional, :similar_traditional, :part_of_speech, :classifier, :initial, :final, :duplicate_from, :ip_address, :vote_value)
     end
 end

@@ -42,7 +42,7 @@
   <tbody>
     <% @mandarin_words.each do |mandarin_word| %>
       <tr>
-        <td><%= mandarin_word.user %></td>
+        <td><%= mandarin_word.user.username %></td>
         <td><%= mandarin_word.entry_id %></td>
         <td><%= mandarin_word.view_status %></td>
         <td><%= mandarin_word.meaning %></td>

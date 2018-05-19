@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_204333) do
+ActiveRecord::Schema.define(version: 2018_05_19_054338) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "mandarin_preferences", force: :cascade do |t|
     t.bigint "user_id"
@@ -32,7 +34,7 @@ ActiveRecord::Schema.define(version: 2018_05_09_204333) do
     t.text "understudy_tone_3"
     t.text "understudy_tone_4"
     t.text "understudy_tone_5"
-    t.integer "_pref"
+    t.integer "pinyin_tonemarks_pref"
     t.integer "character_variant_pref"
     t.integer "mnemonic_active_field"
     t.integer "notes_active_field"
@@ -53,7 +55,7 @@ ActiveRecord::Schema.define(version: 2018_05_09_204333) do
     t.index ["user_id"], name: "index_mandarin_preferences_on_user_id"
   end
 
-  create_table "mandarin_words", force: :cascade do |t|
+  create_table "mandarin_words", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.bigint "user_id"
     t.text "entry_id"
     t.integer "view_status"
